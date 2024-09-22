@@ -48,6 +48,9 @@ function App() {
       if (option.value === "Highest lowercase alphabet") {
         filteredData.highest_lowercase_alphabet = responseData.highest_lowercase_alphabet;
       }
+      if (option.value === "File Valid") {
+        filteredData.file_valid = responseData.file_valid; // Added to capture file_valid
+      }
     });
 
     return (
@@ -62,13 +65,11 @@ function App() {
     { value: "Alphabets", label: "Alphabets" },
     { value: "Numbers", label: "Numbers" },
     { value: "Highest lowercase alphabet", label: "Highest lowercase alphabet" },
+    { value: "File Valid", label: "File Valid" }, // Added new option
   ];
 
   return (
-  <div
-      className="App"
-      style={{ padding: "50px 0", width: "80%", margin: "auto" }}
-    >
+    <div className="App" style={{ padding: "50px 0", width: "80%", margin: "auto" }}>
       <h1>API Interaction</h1>
       <fieldset style={{ borderWidth: "1.2px", borderRadius: "5px" }}>
         <legend style={{ color: "gray", fontWeight: "600" }}>API Input</legend>
