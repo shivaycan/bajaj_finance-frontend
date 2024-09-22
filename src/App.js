@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Select from "react-select";
+import "./App.css";
 
 function App() {
   const [jsonInput, setJsonInput] = useState("");
@@ -64,19 +65,24 @@ function App() {
   ];
 
   return (
-    <div className="App" style={{ padding: "20px" }}>
+  <div
+      className="App"
+      style={{ padding: "50px 0", width: "80%", margin: "auto" }}
+    >
       <h1>API Interaction</h1>
-      <textarea
-        value={jsonInput}
-        onChange={handleJsonInputChange}
-        placeholder='Enter JSON here, e.g., { "data": ["A","C","z"] }'
-        rows="6"
-        cols="50"
-      />
+      <fieldset style={{ borderWidth: "1.2px", borderRadius: "5px" }}>
+        <legend style={{ color: "gray", fontWeight: "600" }}>API Input</legend>
+        <textarea
+          value={jsonInput}
+          onChange={handleJsonInputChange}
+          placeholder='Enter JSON here, e.g., { "data": ["A","C","z"] }'
+          rows="1"
+          cols="100"
+          style={{ width: "100%", outline: "none", border: "none" }}
+        />
+      </fieldset>
       <br />
-      <button onClick={handleSubmit} style={{ margin: "10px" }}>
-        Submit
-      </button>
+      <button onClick={handleSubmit}>Submit</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       {responseData && (
