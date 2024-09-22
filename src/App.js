@@ -76,7 +76,7 @@ function App() {
           value={jsonInput}
           onChange={handleJsonInputChange}
           placeholder='Enter JSON here, e.g., { "data": ["A","C","z"] }'
-          rows="1"
+          rows="4"
           cols="100"
           style={{ width: "100%", outline: "none", border: "none" }}
         />
