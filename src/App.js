@@ -12,7 +12,7 @@ function App() {
     try {
       const parsedInput = JSON.parse(jsonInput);
       
-      const res = await fetch('https://vercel.com/shivaygargs-projects/bajaj-finserv-backend/bfhl', { // Updated to port 3001
+      const res = await fetch('https://bajaj-finserv-backend-neon.vercel.app//bfhl', { // Updated to port 3001
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
